@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Formora</string>
+    <string name="title_activity_main">Formora - Soil Irrigation System</string>
+    <string name="package_name">com.formora.irrigation</string>
+    <string name="custom_url_scheme">com.formora.irrigation</string>
+</resources>

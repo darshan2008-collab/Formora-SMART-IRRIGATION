@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Production builds
+dist/
+frontend/dist/
+backend/dist/
+
+# Local databases & logs
+*.db
+*.db-journal
+*.log
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
