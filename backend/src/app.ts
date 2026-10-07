@@ -12,7 +12,7 @@ export function createApp(): express.Application {
   // Middleware
   const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
   app.use(cors({
-    origin: (origin, callback) => {
+    origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
       // Allow requests with no origin (like mobile apps, curl, postman) or any localhost origin
       if (!origin || origin.startsWith('http://localhost') || origin.startsWith('http://127.0.0.1') || origin === frontendUrl) {
         callback(null, true);

@@ -10,9 +10,9 @@ import { ESP32Service } from './esp32.service.js';
 import { Device, SensorReading } from '../types/sensor.js';
 
 class PollingService {
-  private timer: NodeJS.Timeout | null = null;
+  private timer: ReturnType<typeof setInterval> | null = null;
   private isPolling: boolean = false;
-  private autoWateringTimer: NodeJS.Timeout | null = null;
+  private autoWateringTimer: ReturnType<typeof setTimeout> | null = null;
   private consecutiveFailures: number = 0;
 
   // Realistic Demo simulation state

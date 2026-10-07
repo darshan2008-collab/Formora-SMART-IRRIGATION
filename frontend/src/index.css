@@ -249,6 +249,7 @@
 .btn-17 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
+  appearance: button;
   background-color: #1A3826;
   background-image: none;
   color: #fff;
@@ -259,6 +260,7 @@
   line-height: 1.4;
   margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0.65rem 2rem;
   text-transform: uppercase;
   border-radius: 99rem;
@@ -317,7 +319,8 @@
   transition: color 0.25s ease;
 }
 
-.btn-17:hover:not(:disabled) .text {
+.btn-17:hover:not(:disabled) .text,
+.btn-17:active:not(:disabled) .text {
   -webkit-animation: move-up-alternate 0.32s forwards;
   animation: move-up-alternate 0.32s forwards;
 }
@@ -376,11 +379,13 @@
   z-index: 1;
 }
 
-.btn-17:hover:not(:disabled):before {
+.btn-17:hover:not(:disabled):before,
+.btn-17:active:not(:disabled):before {
   --progress: 100%;
 }
 
-.btn-17:hover:not(:disabled):after {
+.btn-17:hover:not(:disabled):after,
+.btn-17:active:not(:disabled):after {
   --progress: -102%;
 }
 
@@ -403,16 +408,22 @@
   background: #34D399; /* Vibrant mint green sweep */
 }
 .btn-17-primary:hover:not(:disabled),
-.btn-17-farm:hover:not(:disabled) {
+.btn-17-primary:active:not(:disabled),
+.btn-17-farm:hover:not(:disabled),
+.btn-17-farm:active:not(:disabled) {
   border-color: #34D399;
   box-shadow: 0 6px 20px 0 rgba(52, 211, 153, 0.35);
 }
 .btn-17-primary:hover:not(:disabled) .text,
-.btn-17-farm:hover:not(:disabled) .text {
+.btn-17-primary:active:not(:disabled) .text,
+.btn-17-farm:hover:not(:disabled) .text,
+.btn-17-farm:active:not(:disabled) .text {
   color: #0A2214; /* Deep contrasting forest green */
 }
 .btn-17-primary:hover:not(:disabled) svg,
-.btn-17-farm:hover:not(:disabled) svg {
+.btn-17-primary:active:not(:disabled) svg,
+.btn-17-farm:hover:not(:disabled) svg,
+.btn-17-farm:active:not(:disabled) svg {
   stroke: #0A2214;
 }
 
@@ -427,14 +438,17 @@
 .btn-17-emerald:after {
   background: #ECFDF5;
 }
-.btn-17-emerald:hover:not(:disabled) {
+.btn-17-emerald:hover:not(:disabled),
+.btn-17-emerald:active:not(:disabled) {
   border-color: #059669;
   box-shadow: 0 6px 20px 0 rgba(5, 150, 105, 0.35);
 }
-.btn-17-emerald:hover:not(:disabled) .text {
+.btn-17-emerald:hover:not(:disabled) .text,
+.btn-17-emerald:active:not(:disabled) .text {
   color: #064E3B;
 }
-.btn-17-emerald:hover:not(:disabled) svg {
+.btn-17-emerald:hover:not(:disabled) svg,
+.btn-17-emerald:active:not(:disabled) svg {
   stroke: #064E3B;
 }
 
@@ -449,14 +463,17 @@
 .btn-17-danger:after {
   background: #FFE4E6;
 }
-.btn-17-danger:hover:not(:disabled) {
+.btn-17-danger:hover:not(:disabled),
+.btn-17-danger:active:not(:disabled) {
   border-color: #BE123C;
   box-shadow: 0 6px 20px 0 rgba(190, 18, 60, 0.35);
 }
-.btn-17-danger:hover:not(:disabled) .text {
+.btn-17-danger:hover:not(:disabled) .text,
+.btn-17-danger:active:not(:disabled) .text {
   color: #881337;
 }
-.btn-17-danger:hover:not(:disabled) svg {
+.btn-17-danger:hover:not(:disabled) svg,
+.btn-17-danger:active:not(:disabled) svg {
   stroke: #881337;
 }
 
@@ -475,16 +492,22 @@
   background: #1A3826;
 }
 .btn-17-secondary:hover:not(:disabled),
-.btn-17-outline:hover:not(:disabled) {
+.btn-17-secondary:active:not(:disabled),
+.btn-17-outline:hover:not(:disabled),
+.btn-17-outline:active:not(:disabled) {
   border-color: #1A3826;
   box-shadow: 0 6px 18px 0 rgba(26, 56, 38, 0.2);
 }
 .btn-17-secondary:hover:not(:disabled) .text,
-.btn-17-outline:hover:not(:disabled) .text {
+.btn-17-secondary:active:not(:disabled) .text,
+.btn-17-outline:hover:not(:disabled) .text,
+.btn-17-outline:active:not(:disabled) .text {
   color: #FFFFFF;
 }
 .btn-17-secondary:hover:not(:disabled) svg,
-.btn-17-outline:hover:not(:disabled) svg {
+.btn-17-secondary:active:not(:disabled) svg,
+.btn-17-outline:hover:not(:disabled) svg,
+.btn-17-outline:active:not(:disabled) svg {
   stroke: #FFFFFF;
 }
 
@@ -697,7 +720,8 @@
   transform: translate3d(0px, 0px, 35px);
   transition: all 0.5s ease-in-out;
 }
-.uiverse-card-parent:hover .uiverse-icon {
+.uiverse-card-parent:hover .uiverse-icon,
+.uiverse-card-parent:active .uiverse-icon {
   transform: translate3d(0px, 0px, 50px);
 }
 
@@ -707,7 +731,8 @@
   transform: translate3d(0px, 0px, 28px);
   transition: all 0.5s ease-in-out;
 }
-.uiverse-card-parent:hover .uiverse-title {
+.uiverse-card-parent:hover .uiverse-title,
+.uiverse-card-parent:active .uiverse-title {
   transform: translate3d(0px, 0px, 42px);
 }
 
@@ -717,7 +742,8 @@
   transform: translate3d(0px, 0px, 36px);
   transition: all 0.5s ease-in-out;
 }
-.uiverse-card-parent:hover .uiverse-value {
+.uiverse-card-parent:hover .uiverse-value,
+.uiverse-card-parent:active .uiverse-value {
   transform: translate3d(0px, 0px, 54px);
 }
 
@@ -726,7 +752,8 @@
   transform: translate3d(0px, 0px, 22px);
   transition: all 0.5s ease-in-out;
 }
-.uiverse-card-parent:hover .uiverse-progress {
+.uiverse-card-parent:hover .uiverse-progress,
+.uiverse-card-parent:active .uiverse-progress {
   transform: translate3d(0px, 0px, 32px);
 }
 
@@ -735,7 +762,8 @@
   transform: translate3d(0px, 0px, 16px);
   transition: all 0.5s ease-in-out;
 }
-.uiverse-card-parent:hover .uiverse-status {
+.uiverse-card-parent:hover .uiverse-status,
+.uiverse-card-parent:active .uiverse-status {
   transform: translate3d(0px, 0px, 24px);
 }
 
@@ -772,7 +800,8 @@
   }
 }
 
-.uiverse-card-parent:hover .uiverse-date-box {
+.uiverse-card-parent:hover .uiverse-date-box,
+.uiverse-card-parent:active .uiverse-date-box {
   transform: translate3d(0px, 0px, 68px);
   box-shadow: rgba(100, 100, 111, 0.3) 0px 18px 14px -8px;
 }

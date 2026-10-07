@@ -15,6 +15,8 @@
     "build:server": "npm --prefix backend run build",
     "build:client": "npm --prefix frontend run build",
     "build": "npm run build:backend && npm run build:frontend",
+    "render:build": "npm --prefix backend install && npm --prefix backend run build",
+    "render:start": "npm --prefix backend run start",
     "start": "npm --prefix backend run start",
     "android:open": "npm --prefix frontend run cap:open",
     "android:sync": "npm --prefix frontend run cap:sync",
