@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "description": "Formora - Soil Irrigation System fullstack application with ESP32 telemetry, automated watering control, SQLite database, and Android APK support",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
     "dev:backend": "npm --prefix backend run dev",
@@ -10,12 +17,12 @@
     "dev:server": "npm --prefix backend run dev",
     "dev:client": "npm --prefix frontend run dev",
     "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "build:backend": "npm --prefix backend run build",
-    "build:frontend": "npm --prefix frontend run build",
-    "build:server": "npm --prefix backend run build",
-    "build:client": "npm --prefix frontend run build",
+    "build:backend": "npm --prefix backend install && npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend install && npm --prefix frontend run build",
+    "build:server": "npm run build:backend",
+    "build:client": "npm run build:frontend",
     "build": "npm run build:backend && npm run build:frontend",
-    "render:build": "npm --prefix backend install && npm --prefix backend run build",
+    "render:build": "npm run build:backend",
     "render:start": "npm --prefix backend run start",
     "start": "npm --prefix backend run start",
     "android:open": "npm --prefix frontend run cap:open",
